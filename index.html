@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pentaprima Cat Food - Premium Nutrition for Your Cat</title>
-  <meta name="description" content="Pentaprima - Makanan kucing premium dengan nutrisi lengkap untuk kesehatan optimal kucing kesayangan Anda." />
+  <title>Pentaprima Paint - Cat Air Dinding Premium</title>
+  <meta name="description" content="Pentaprima - Cat air dinding berkualitas premium dengan teknologi terkini untuk hasil yang tahan lama dan indah." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -43,7 +43,6 @@
       position: relative;
     }
 
-    /* Animated background elements */
     body::before {
       content: '';
       position: fixed;
@@ -441,7 +440,6 @@
       transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
       animation: fadeInUp 0.8s ease-out;
       position: relative;
-      group: "card";
     }
 
     .product-card:hover {
@@ -510,6 +508,26 @@
       font-weight: 300;
     }
 
+    .product-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .spec-item strong {
+      color: var(--text-primary);
+    }
+
     .product-price {
       display: flex;
       justify-content: space-between;
@@ -532,6 +550,27 @@
       flex: 1;
       padding: 10px 15px;
       font-size: 11px;
+    }
+
+    /* COLOR VARIANTS */
+    .color-palette {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .color-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--border-color);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .color-dot:hover {
+      transform: scale(1.2);
+      border-color: var(--accent-gold);
     }
 
     /* BENEFITS SECTION */
@@ -757,7 +796,6 @@
       }
     }
 
-    /* Scroll animation observer */
     .fade-in-on-scroll {
       opacity: 0;
       transform: translateY(40px);
@@ -769,7 +807,6 @@
       transform: translateY(0);
     }
 
-    /* Mobile responsive */
     @media (max-width: 768px) {
       .nav-menu {
         display: none;
@@ -825,7 +862,7 @@
     <div class="container">
       <div class="nav-content">
         <div class="logo">
-          <div class="logo-icon">🐾</div>
+          <div class="logo-icon">🎨</div>
           PENTAPRIMA
         </div>
 
@@ -838,8 +875,8 @@
         </ul>
 
         <div class="nav-buttons">
-          <button class="btn btn-secondary">SIGN IN</button>
-          <button class="btn btn-primary">PESAN SEKARANG</button>
+          <button class="btn btn-secondary">KATALOG PDF</button>
+          <button class="btn btn-primary">BELI SEKARANG</button>
         </div>
       </div>
     </div>
@@ -850,47 +887,48 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Nutrisi <span class="gold">Premium</span> untuk Kucing Kesayangan</h1>
+          <h1>Cat Air <span class="gold">Premium</span> untuk Dinding Impian Anda</h1>
           <p>
-            Pentaprima menghadirkan makanan kucing berkualitas tinggi dengan formula lengkap nutrisi,
-            protein optimal, dan rasa yang disuka kucing. Kesehatan kucing Anda adalah prioritas kami.
+            Pentaprima menghadirkan cat air dinding berkualitas tinggi dengan formula tahan lama,
+            warna cemerlang yang tahan hingga 10 tahun, dan ramah lingkungan. Wujudkan dinding indah
+            dengan teknologi cat terdepan.
           </p>
 
           <div class="hero-features">
             <div class="feature-item">
               <div class="feature-icon">✓</div>
-              <span>Protein Tinggi (36%)</span>
+              <span>Tahan 10 Tahun</span>
             </div>
             <div class="feature-item">
               <div class="feature-icon">✓</div>
-              <span>Nutrisi Lengkap</span>
+              <span>500+ Pilihan Warna</span>
             </div>
             <div class="feature-item">
               <div class="feature-icon">✓</div>
-              <span>Rasa Premium</span>
+              <span>Ramah Lingkungan</span>
             </div>
             <div class="feature-item">
               <div class="feature-icon">✓</div>
-              <span>Kesehatan Optimal</span>
+              <span>Daya Tutup Maksimal</span>
             </div>
           </div>
 
           <div class="hero-buttons">
             <button class="btn btn-primary">LIHAT KATALOG</button>
-            <button class="btn btn-secondary">PELAJARI LEBIH LANJUT</button>
+            <button class="btn btn-secondary">KONSULTASI GRATIS</button>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?auto=format&fit=crop&w=600&q=80" alt="Pentaprima Premium Cat Food" />
+            <img src="https://images.unsplash.com/photo-1578500494198-246f612d03b3?auto=format&fit=crop&w=600&q=80" alt="Cat Air Dinding Premium" />
             <div class="floating-badge badge-1">
-              <strong>36%</strong>
-              <span>Protein</span>
+              <strong>10 TAHUN</strong>
+              <span>Garansi Warna</span>
             </div>
             <div class="floating-badge badge-2">
-              <strong>4.9/5</strong>
-              <span>Rating</span>
+              <strong>500+</strong>
+              <span>Pilihan Warna</span>
             </div>
           </div>
         </div>
@@ -902,23 +940,35 @@
   <section class="section" id="products">
     <div class="container">
       <div class="section-header">
-        <h2>Koleksi <span class="gold">Premium</span> Kami</h2>
-        <p>Pilihan lengkap makanan kucing untuk setiap kebutuhan dan tahap kehidupan kucing Anda</p>
+        <h2>Koleksi Cat Air <span class="gold">Premium</span></h2>
+        <p>Pilihan lengkap cat air untuk setiap kebutuhan dan selera desain interior Anda</p>
       </div>
 
       <div class="products-grid">
         <!-- Product 1 -->
         <div class="product-card fade-in-on-scroll">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1568152950566-c1bf43f0209d?auto=format&fit=crop&w=400&q=80" alt="Pentaprima Kitten" />
-            <span class="product-badge">KITTEN</span>
+            <img src="https://images.unsplash.com/photo-1578500494198-246f612d03b3?auto=format&fit=crop&w=400&q=80" alt="Cat Air Matt" />
+            <span class="product-badge">POPULER</span>
           </div>
           <div class="product-info">
-            <div class="product-category">Untuk Anak Kucing</div>
-            <h3 class="product-name">Pentaprima Kitten</h3>
-            <p class="product-description">Formula khusus untuk pertumbuhan dan perkembangan anak kucing dengan nutrisi lengkap.</p>
+            <div class="product-category">Finishing Matt</div>
+            <h3 class="product-name">Pentaprima Matt Premium</h3>
+            <p class="product-description">Finishing semi-gloss dengan tekstur halus dan daya tutup sempurna untuk dinding interior modern.</p>
+            <div class="color-palette">
+              <div class="color-dot" style="background: #FFFFFF; border-color: #c9a961;"></div>
+              <div class="color-dot" style="background: #E8E8E8;"></div>
+              <div class="color-dot" style="background: #D4D4D4;"></div>
+              <div class="color-dot" style="background: #B8B8B8;"></div>
+            </div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>Ukuran:</strong> 5L</div>
+              <div class="spec-item"><strong>Daya Tutup:</strong> 10 m²/L</div>
+              <div class="spec-item"><strong>Waktu Kering:</strong> 4 jam</div>
+              <div class="spec-item"><strong>Garansi:</strong> 10 Tahun</div>
+            </div>
             <div class="product-price">
-              <span class="price">Rp 89.000</span>
+              <span class="price">Rp 275.000</span>
             </div>
             <div class="product-footer">
               <button class="btn btn-primary">+ KERANJANG</button>
@@ -930,15 +980,27 @@
         <!-- Product 2 -->
         <div class="product-card fade-in-on-scroll">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4d4b3f1?auto=format&fit=crop&w=400&q=80" alt="Pentaprima Adult" />
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Cat Air Glossy" />
             <span class="product-badge">BEST SELLER</span>
           </div>
           <div class="product-info">
-            <div class="product-category">Untuk Kucing Dewasa</div>
-            <h3 class="product-name">Pentaprima Adult</h3>
-            <p class="product-description">Formula seimbang untuk kucing dewasa dengan energi optimal dan kesehatan jangka panjang.</p>
+            <div class="product-category">Finishing Glossy</div>
+            <h3 class="product-name">Pentaprima Glossy Premium</h3>
+            <p class="product-description">Finishing berkilau dengan perlindungan maksimal terhadap noda dan mudah dibersihkan.</p>
+            <div class="color-palette">
+              <div class="color-dot" style="background: #F5E6D3;"></div>
+              <div class="color-dot" style="background: #E8D4B8;"></div>
+              <div class="color-dot" style="background: #D4B896;"></div>
+              <div class="color-dot" style="background: #C9A961;"></div>
+            </div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>Ukuran:</strong> 5L</div>
+              <div class="spec-item"><strong>Daya Tutup:</strong> 12 m²/L</div>
+              <div class="spec-item"><strong>Waktu Kering:</strong> 3 jam</div>
+              <div class="spec-item"><strong>Garansi:</strong> 10 Tahun</div>
+            </div>
             <div class="product-price">
-              <span class="price">Rp 95.000</span>
+              <span class="price">Rp 325.000</span>
             </div>
             <div class="product-footer">
               <button class="btn btn-primary">+ KERANJANG</button>
@@ -950,15 +1012,27 @@
         <!-- Product 3 -->
         <div class="product-card fade-in-on-scroll">
           <div class="product-image">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="Pentaprima Senior" />
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=400&q=80" alt="Cat Air Tekstur" />
             <span class="product-badge">PREMIUM</span>
           </div>
           <div class="product-info">
-            <div class="product-category">Untuk Kucing Senior</div>
-            <h3 class="product-name">Pentaprima Senior</h3>
-            <p class="product-description">Diformulasikan khusus untuk kucing senior dengan joint support dan nutrisi lanjut usia.</p>
+            <div class="product-category">Finishing Tekstur</div>
+            <h3 class="product-name">Pentaprima Tekstur Luxury</h3>
+            <p class="product-description">Finishing dengan tekstur elegan memberikan kedalaman dimensi untuk dinding eksklusif.</p>
+            <div class="color-palette">
+              <div class="color-dot" style="background: #8B7355;"></div>
+              <div class="color-dot" style="background: #A0826D;"></div>
+              <div class="color-dot" style="background: #6B5344;"></div>
+              <div class="color-dot" style="background: #5C4A3D;"></div>
+            </div>
+            <div class="product-specs">
+              <div class="spec-item"><strong>Ukuran:</strong> 5L</div>
+              <div class="spec-item"><strong>Daya Tutup:</strong> 8 m²/L</div>
+              <div class="spec-item"><strong>Waktu Kering:</strong> 6 jam</div>
+              <div class="spec-item"><strong>Garansi:</strong> 12 Tahun</div>
+            </div>
             <div class="product-price">
-              <span class="price">Rp 110.000</span>
+              <span class="price">Rp 425.000</span>
             </div>
             <div class="product-footer">
               <button class="btn btn-primary">+ KERANJANG</button>
@@ -975,46 +1049,46 @@
     <div class="container">
       <div class="section-header">
         <h2>Keunggulan <span class="gold">Pentaprima</span></h2>
-        <p>Dipercaya oleh ribuan pecinta kucing di Indonesia</p>
+        <p>Cat air dinding terbaik dengan teknologi dan inovasi terdepan di kelasnya</p>
       </div>
 
       <div class="benefits-grid">
         <div class="benefits-list">
           <div class="benefit-item fade-in-on-scroll">
-            <div class="benefit-icon">🏥</div>
+            <div class="benefit-icon">🛡️</div>
             <div class="benefit-text">
-              <h3>Kesehatan Optimal</h3>
-              <p>Nutrisi seimbang dengan mineral dan vitamin lengkap untuk kesehatan kucing jangka panjang.</p>
+              <h3>Tahan Lama Hingga 10 Tahun</h3>
+              <p>Formula advanced memastikan warna tetap cemerlang dan tahan terhadap cuaca ekstrem.</p>
             </div>
           </div>
 
           <div class="benefit-item fade-in-on-scroll">
-            <div class="benefit-icon">💪</div>
+            <div class="benefit-icon">🎨</div>
             <div class="benefit-text">
-              <h3>Daya Tahan Tubuh</h3>
-              <p>Mengandung antioksidan dan immune booster untuk melindungi kucing dari penyakit.</p>
+              <h3>500+ Pilihan Warna</h3>
+              <p>Palet warna lengkap dari neutral hingga bold colors untuk eksplorasi kreativitas tanpa batas.</p>
             </div>
           </div>
 
           <div class="benefit-item fade-in-on-scroll">
-            <div class="benefit-icon">🦷</div>
+            <div class="benefit-icon">♻️</div>
             <div class="benefit-text">
-              <h3>Kesehatan Gigi</h3>
-              <p>Formula khusus membantu menjaga kesehatan gigi dan gusi kucing Anda.</p>
+              <h3>Ramah Lingkungan</h3>
+              <p>Formula low-VOC yang aman untuk keluarga dan lingkungan, telah tersertifikasi eco-friendly.</p>
             </div>
           </div>
 
           <div class="benefit-item fade-in-on-scroll">
             <div class="benefit-icon">✨</div>
             <div class="benefit-text">
-              <h3>Bulu Sehat Berkilau</h3>
-              <p>Omega 3 dan omega 6 untuk bulu yang lebih sehat, halus, dan berkilau alami.</p>
+              <h3>Mudah Dibersihkan</h3>
+              <p>Permukaan yang smooth memudahkan pembersihan dari noda dan tahan terhadap abrasi.</p>
             </div>
           </div>
         </div>
 
         <div class="benefits-image fade-in-on-scroll">
-          <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=600&q=80" alt="Kucing Sehat Berkilau" />
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80" alt="Interior Cantik dengan Cat Pentaprima" />
         </div>
       </div>
     </div>
@@ -1025,19 +1099,19 @@
     <div class="container">
       <div class="section-header">
         <h2>Kepuasan <span class="gold">Pelanggan</span></h2>
-        <p>Testimoni dari ribuan pelanggan setia Pentaprima</p>
+        <p>Testimoni dari ribuan pelanggan yang puas dengan kualitas Pentaprima</p>
       </div>
 
       <div class="testimonials-grid">
         <div class="testimonial-card fade-in-on-scroll">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">
-            "Kucing saya sebelumnya pilih-pilih makanan, tapi sejak pakai Pentaprima langsung habis! Bulunya juga jadi lebih berkilau dan sehat."
+            "Hasil cat sangat memuaskan! Warnanya tahan lama dan tidak mudah pudar. Sudah setahun ini dan masih terlihat seperti baru."
           </p>
           <div class="testimonial-author">
-            <div class="author-avatar">SF</div>
+            <div class="author-avatar">BW</div>
             <div class="author-info">
-              <strong>Siti Fatimah</strong>
+              <strong>Budi Wijaya</strong>
               <span>Jakarta</span>
             </div>
           </div>
@@ -1046,12 +1120,12 @@
         <div class="testimonial-card fade-in-on-scroll">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">
-            "Kualitasnya premium dan harganya terjangkau. Rutin konsultasi dengan customer service mereka yang sangat responsif."
+            "Pelayanan toko sangat ramah dan helpful! Mereka membantu saya memilih warna yang tepat untuk ruang keluarga."
           </p>
           <div class="testimonial-author">
-            <div class="author-avatar">RW</div>
+            <div class="author-avatar">SR</div>
             <div class="author-info">
-              <strong>Rino Wijaya</strong>
+              <strong>Siti Rahma</strong>
               <span>Surabaya</span>
             </div>
           </div>
@@ -1060,12 +1134,12 @@
         <div class="testimonial-card fade-in-on-scroll">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">
-            "Sudah pakai Pentaprima 3 bulan. Kucing saya lebih aktif, energik, dan hasil lab kesehatan menunjukkan peningkatan!"
+            "Cat Pentaprima adalah investasi terbaik untuk rumah saya. Kualitas premium dengan harga yang kompetitif!"
           </p>
           <div class="testimonial-author">
-            <div class="author-avatar">AB</div>
+            <div class="author-avatar">AH</div>
             <div class="author-info">
-              <strong>Andi Budi</strong>
+              <strong>Ahmad Hendra</strong>
               <span>Bandung</span>
             </div>
           </div>
@@ -1078,9 +1152,9 @@
   <section class="section" id="contact">
     <div class="container">
       <div class="cta-section fade-in-on-scroll">
-        <h2>Siap Memberikan yang Terbaik?</h2>
-        <p>Dapatkan penawaran spesial untuk pembelian pertama dan konsultasi gratis dengan ahli gizi kucing kami.</p>
-        <button class="btn btn-primary">PESAN SEKARANG</button>
+        <h2>Siap Mengubah Dinding Anda?</h2>
+        <p>Dapatkan konsultasi gratis dengan expert color consultant kami dan diskon khusus untuk pembelian paket besar.</p>
+        <button class="btn btn-primary">HUBUNGI SEKARANG</button>
       </div>
     </div>
   </section>
@@ -1092,17 +1166,17 @@
         <div class="footer-section">
           <h3>Tentang Kami</h3>
           <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
-            Pentaprima adalah brand makanan kucing terpercaya dengan komitmen menghadirkan nutrisi premium untuk kesehatan kucing Indonesia.
+            Pentaprima adalah brand cat air dinding terpercaya dengan komitmen menghadirkan produk berkualitas premium untuk rumah idaman Anda.
           </p>
         </div>
 
         <div class="footer-section">
           <h3>Produk</h3>
           <ul>
-            <li><a href="#">Pentaprima Kitten</a></li>
-            <li><a href="#">Pentaprima Adult</a></li>
-            <li><a href="#">Pentaprima Senior</a></li>
-            <li><a href="#">Panduan Pemberian</a></li>
+            <li><a href="#products">Cat Matt Premium</a></li>
+            <li><a href="#products">Cat Glossy Premium</a></li>
+            <li><a href="#products">Cat Tekstur Luxury</a></li>
+            <li><a href="#">Pelengkap Cat</a></li>
           </ul>
         </div>
 
@@ -1110,9 +1184,9 @@
           <h3>Layanan</h3>
           <ul>
             <li><a href="#">Konsultasi Gratis</a></li>
-            <li><a href="#">Panduan Perawatan</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Karir</a></li>
+            <li><a href="#">Panduan Aplikasi</a></li>
+            <li><a href="#">Garansi & Klaim</a></li>
+            <li><a href="#">Toko Terdekat</a></li>
           </ul>
         </div>
 
@@ -1121,13 +1195,13 @@
           <ul>
             <li><a href="tel:+6281234567890">+62 812-3456-7890</a></li>
             <li><a href="mailto:info@pentaprima.co.id">info@pentaprima.co.id</a></li>
-            <li>Jl. Pet Care No. 123<br>Jakarta, Indonesia</li>
+            <li>Jl. Cat Dinding No. 123<br>Jakarta, Indonesia</li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Pentaprima. Semua hak dilindungi.</p>
+        <p>&copy; 2024 Pentaprima Paint. Semua hak dilindungi.</p>
         <div style="display: flex; gap: 20px;">
           <a href="#" style="color: var(--accent-gold); text-decoration: none;">Privacy Policy</a>
           <a href="#" style="color: var(--accent-gold); text-decoration: none;">Terms of Service</a>
@@ -1179,18 +1253,6 @@
 
     document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
       observer.observe(el);
-    });
-
-    // Button ripple effect
-    document.querySelectorAll('.btn').forEach(button => {
-      button.addEventListener('mouseenter', function() {
-        const ripple = document.createElement('span');
-        ripple.style.position = 'absolute';
-        ripple.style.borderRadius = '50%';
-        ripple.style.background = 'rgba(255, 255, 255, 0.5)';
-        ripple.style.transform = 'scale(0)';
-        ripple.style.animation = 'ripple 0.6s ease-out';
-      });
     });
   </script>
 </body>
