@@ -1,0 +1,53 @@
+/* Additional stylesheet for advanced styling options */
+
+/* Dark mode gradient backgrounds */
+.gradient-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 14, 39, 0.8) 0%,
+    rgba(26, 31, 58, 0.8) 50%,
+    rgba(10, 14, 39, 0.8) 100%
+  );
+}
+
+/* Premium card effect */
+.premium-border {
+  border: 2px solid;
+  border-image: linear-gradient(
+    135deg,
+    #c9a961 0%,
+    #d4b896 50%,
+    #c9a961 100%
+  ) 1;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Advanced hover states */
+@media (hover: hover) {
+  .interactive:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(201, 169, 97, 0.2);
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .nav-buttons,
+  .hero-buttons,
+  .product-footer,
+  footer {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}

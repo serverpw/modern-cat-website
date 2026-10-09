@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pentaprima Cat Food - Premium Nutrition for Your Cat</title>
+  <meta name="description" content="Pentaprima - Makanan kucing premium dengan nutrisi lengkap untuk kesehatan optimal kucing kesayangan Anda." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark-bg: #0a0e27;
+      --dark-secondary: #1a1f3a;
+      --accent-gold: #c9a961;
+      --accent-cream: #f5f1e8;
+      --text-primary: #ffffff;
+      --text-secondary: #b8b8b8;
+      --border-color: rgba(201, 169, 97, 0.15);
+      --hover-gold: #e0c074;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(
+        135deg,
+        #0a0e27 0%,
+        #1a1f3a 50%,
+        #0d1129 100%
+      );
+      color: var(--text-primary);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Animated background elements */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatBg 20s ease-in-out infinite;
+    }
+
+    @keyframes floatBg {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 0.8; }
+    }
+
+    .container {
+      width: min(1200px, calc(100% - 40px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(10, 14, 39, 0.7);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(10, 14, 39, 0.95);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent-gold);
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .logo:hover {
+      color: var(--hover-gold);
+      text-shadow: 0 0 20px rgba(201, 169, 97, 0.4);
+    }
+
+    .logo-icon {
+      width: 35px;
+      height: 35px;
+      background: linear-gradient(135deg, var(--accent-gold), #e0c074);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--dark-bg);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-gold), transparent);
+      transition: width 0.4s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent-gold);
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+      font-size: 12px;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: left 0.3s ease;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-gold), #d4b896);
+      color: var(--dark-bg);
+      box-shadow: 0 8px 24px rgba(201, 169, 97, 0.3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 36px rgba(201, 169, 97, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent-gold);
+      border: 2px solid var(--accent-gold);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(201, 169, 97, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text {
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-text h1 .gold {
+      color: var(--accent-gold);
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      width: 30px;
+      height: 30px;
+      background: rgba(201, 169, 97, 0.2);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-item span {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      position: relative;
+      animation: slideInRight 1s ease-out;
+    }
+
+    .hero-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: zoomIn 1.2s ease-out;
+    }
+
+    .floating-badge {
+      position: absolute;
+      background: rgba(10, 14, 39, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .badge-1 {
+      top: 30px;
+      right: 20px;
+      animation-delay: 0s;
+    }
+
+    .badge-2 {
+      bottom: 40px;
+      left: 30px;
+      animation-delay: 1.5s;
+    }
+
+    .floating-badge strong {
+      display: block;
+      color: var(--accent-gold);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .floating-badge span {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.95);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /* PRODUCTS SECTION */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 70px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-header h2 .gold {
+      color: var(--accent-gold);
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: rgba(26, 31, 58, 0.5);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+      animation: fadeInUp 0.8s ease-out;
+      position: relative;
+      group: "card";
+    }
+
+    .product-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(201, 169, 97, 0.2);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), rgba(201, 169, 97, 0.05));
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.08);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--accent-gold);
+      color: var(--dark-bg);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .product-info {
+      padding: 25px;
+    }
+
+    .product-category {
+      font-size: 12px;
+      color: var(--accent-gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .product-description {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .product-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .product-footer {
+      display: flex;
+      gap: 10px;
+    }
+
+    .product-footer .btn {
+      flex: 1;
+      padding: 10px 15px;
+      font-size: 11px;
+    }
+
+    /* BENEFITS SECTION */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .benefits-list {
+      display: grid;
+      gap: 25px;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 20px;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(201, 169, 97, 0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-color);
+    }
+
+    .benefit-text h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .benefit-text p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .benefits-image {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+    }
+
+    .benefits-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .benefits-image:hover img {
+      transform: scale(1.05);
+    }
+
+    /* TESTIMONIALS */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: rgba(26, 31, 58, 0.5);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      animation: fadeInUp 0.8s ease-out;
+      transition: all 0.4s ease;
+    }
+
+    .testimonial-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-8px);
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      font-size: 14px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(201, 169, 97, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-color);
+      font-weight: 700;
+      color: var(--accent-gold);
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .author-info span {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, rgba(201, 169, 97, 0.15), rgba(201, 169, 97, 0.05));
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 60px 40px;
+      text-align: center;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      background: rgba(10, 14, 39, 0.8);
+      border-top: 1px solid var(--border-color);
+      padding: 50px 0 20px;
+      margin-top: 100px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-section h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--accent-gold);
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-section ul li a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--accent-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-color);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Scroll animation observer */
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-features {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .cta-section {
+        padding: 40px 25px;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <div class="logo-icon">🐾</div>
+          PENTAPRIMA
+        </div>
+
+        <ul class="nav-menu">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#products">PRODUK</a></li>
+          <li><a href="#benefits">MANFAAT</a></li>
+          <li><a href="#testimonials">TESTIMONI</a></li>
+          <li><a href="#contact">KONTAK</a></li>
+        </ul>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary">SIGN IN</button>
+          <button class="btn btn-primary">PESAN SEKARANG</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Nutrisi <span class="gold">Premium</span> untuk Kucing Kesayangan</h1>
+          <p>
+            Pentaprima menghadirkan makanan kucing berkualitas tinggi dengan formula lengkap nutrisi,
+            protein optimal, dan rasa yang disuka kucing. Kesehatan kucing Anda adalah prioritas kami.
+          </p>
+
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <span>Protein Tinggi (36%)</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <span>Nutrisi Lengkap</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <span>Rasa Premium</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">✓</div>
+              <span>Kesehatan Optimal</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <button class="btn btn-primary">LIHAT KATALOG</button>
+            <button class="btn btn-secondary">PELAJARI LEBIH LANJUT</button>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?auto=format&fit=crop&w=600&q=80" alt="Pentaprima Premium Cat Food" />
+            <div class="floating-badge badge-1">
+              <strong>36%</strong>
+              <span>Protein</span>
+            </div>
+            <div class="floating-badge badge-2">
+              <strong>4.9/5</strong>
+              <span>Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2>Koleksi <span class="gold">Premium</span> Kami</h2>
+        <p>Pilihan lengkap makanan kucing untuk setiap kebutuhan dan tahap kehidupan kucing Anda</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card fade-in-on-scroll">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1568152950566-c1bf43f0209d?auto=format&fit=crop&w=400&q=80" alt="Pentaprima Kitten" />
+            <span class="product-badge">KITTEN</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Untuk Anak Kucing</div>
+            <h3 class="product-name">Pentaprima Kitten</h3>
+            <p class="product-description">Formula khusus untuk pertumbuhan dan perkembangan anak kucing dengan nutrisi lengkap.</p>
+            <div class="product-price">
+              <span class="price">Rp 89.000</span>
+            </div>
+            <div class="product-footer">
+              <button class="btn btn-primary">+ KERANJANG</button>
+              <button class="btn btn-secondary">DETAIL</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card fade-in-on-scroll">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4d4b3f1?auto=format&fit=crop&w=400&q=80" alt="Pentaprima Adult" />
+            <span class="product-badge">BEST SELLER</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Untuk Kucing Dewasa</div>
+            <h3 class="product-name">Pentaprima Adult</h3>
+            <p class="product-description">Formula seimbang untuk kucing dewasa dengan energi optimal dan kesehatan jangka panjang.</p>
+            <div class="product-price">
+              <span class="price">Rp 95.000</span>
+            </div>
+            <div class="product-footer">
+              <button class="btn btn-primary">+ KERANJANG</button>
+              <button class="btn btn-secondary">DETAIL</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card fade-in-on-scroll">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="Pentaprima Senior" />
+            <span class="product-badge">PREMIUM</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Untuk Kucing Senior</div>
+            <h3 class="product-name">Pentaprima Senior</h3>
+            <p class="product-description">Diformulasikan khusus untuk kucing senior dengan joint support dan nutrisi lanjut usia.</p>
+            <div class="product-price">
+              <span class="price">Rp 110.000</span>
+            </div>
+            <div class="product-footer">
+              <button class="btn btn-primary">+ KERANJANG</button>
+              <button class="btn btn-secondary">DETAIL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS SECTION -->
+  <section class="section" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2>Keunggulan <span class="gold">Pentaprima</span></h2>
+        <p>Dipercaya oleh ribuan pecinta kucing di Indonesia</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefits-list">
+          <div class="benefit-item fade-in-on-scroll">
+            <div class="benefit-icon">🏥</div>
+            <div class="benefit-text">
+              <h3>Kesehatan Optimal</h3>
+              <p>Nutrisi seimbang dengan mineral dan vitamin lengkap untuk kesehatan kucing jangka panjang.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item fade-in-on-scroll">
+            <div class="benefit-icon">💪</div>
+            <div class="benefit-text">
+              <h3>Daya Tahan Tubuh</h3>
+              <p>Mengandung antioksidan dan immune booster untuk melindungi kucing dari penyakit.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item fade-in-on-scroll">
+            <div class="benefit-icon">🦷</div>
+            <div class="benefit-text">
+              <h3>Kesehatan Gigi</h3>
+              <p>Formula khusus membantu menjaga kesehatan gigi dan gusi kucing Anda.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item fade-in-on-scroll">
+            <div class="benefit-icon">✨</div>
+            <div class="benefit-text">
+              <h3>Bulu Sehat Berkilau</h3>
+              <p>Omega 3 dan omega 6 untuk bulu yang lebih sehat, halus, dan berkilau alami.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits-image fade-in-on-scroll">
+          <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=600&q=80" alt="Kucing Sehat Berkilau" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Kepuasan <span class="gold">Pelanggan</span></h2>
+        <p>Testimoni dari ribuan pelanggan setia Pentaprima</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in-on-scroll">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Kucing saya sebelumnya pilih-pilih makanan, tapi sejak pakai Pentaprima langsung habis! Bulunya juga jadi lebih berkilau dan sehat."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SF</div>
+            <div class="author-info">
+              <strong>Siti Fatimah</strong>
+              <span>Jakarta</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in-on-scroll">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Kualitasnya premium dan harganya terjangkau. Rutin konsultasi dengan customer service mereka yang sangat responsif."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RW</div>
+            <div class="author-info">
+              <strong>Rino Wijaya</strong>
+              <span>Surabaya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in-on-scroll">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Sudah pakai Pentaprima 3 bulan. Kucing saya lebih aktif, energik, dan hasil lab kesehatan menunjukkan peningkatan!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AB</div>
+            <div class="author-info">
+              <strong>Andi Budi</strong>
+              <span>Bandung</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta-section fade-in-on-scroll">
+        <h2>Siap Memberikan yang Terbaik?</h2>
+        <p>Dapatkan penawaran spesial untuk pembelian pertama dan konsultasi gratis dengan ahli gizi kucing kami.</p>
+        <button class="btn btn-primary">PESAN SEKARANG</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Tentang Kami</h3>
+          <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.8; font-weight: 300;">
+            Pentaprima adalah brand makanan kucing terpercaya dengan komitmen menghadirkan nutrisi premium untuk kesehatan kucing Indonesia.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Produk</h3>
+          <ul>
+            <li><a href="#">Pentaprima Kitten</a></li>
+            <li><a href="#">Pentaprima Adult</a></li>
+            <li><a href="#">Pentaprima Senior</a></li>
+            <li><a href="#">Panduan Pemberian</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <ul>
+            <li><a href="#">Konsultasi Gratis</a></li>
+            <li><a href="#">Panduan Perawatan</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Karir</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <ul>
+            <li><a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+            <li><a href="mailto:info@pentaprima.co.id">info@pentaprima.co.id</a></li>
+            <li>Jl. Pet Care No. 123<br>Jakarta, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pentaprima. Semua hak dilindungi.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" style="color: var(--accent-gold); text-decoration: none;">Privacy Policy</a>
+          <a href="#" style="color: var(--accent-gold); text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href === '') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Fade in on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Button ripple effect
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('mouseenter', function() {
+        const ripple = document.createElement('span');
+        ripple.style.position = 'absolute';
+        ripple.style.borderRadius = '50%';
+        ripple.style.background = 'rgba(255, 255, 255, 0.5)';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.animation = 'ripple 0.6s ease-out';
+      });
+    });
+  </script>
+</body>
+</html>
